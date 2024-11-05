@@ -10,19 +10,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     darkModeToggle.addEventListener('click', function () {
-        // Alternar el modo oscuro
+        body.classList.toggle('dark-mode');
+
+        // Mostrar notificación
         if (body.classList.contains('dark-mode')) {
-            body.classList.remove('dark-mode');
-            darkModeToggle.textContent = 'Modo Oscuro';
-            localStorage.setItem('darkMode', 'disabled'); // Guardar en localStorage
-        } else {
-            body.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'enabled');
             darkModeToggle.textContent = 'Modo Claro';
-            localStorage.setItem('darkMode', 'enabled'); // Guardar en localStorage
+            showNotification('Estás en modo oscuro');
+        } else {
+            localStorage.setItem('darkMode', 'disabled');
+            darkModeToggle.textContent = 'Modo Oscuro';
+            showNotification('Estás en modo claro');
         }
     });
-});
 
+    function showNotification(message) {
+        notification.textContent = message;
+        notification.classList.remove('d-none');
+        notification.classList.add('show');
+        
+        setTimeout(() => {
+            notification.classList.remove('show');
+            notification.classList.add('d-none');
+        }, 3000);
+    }
+});
 
 // Validación y envío del formulario de contacto
 document.getElementById('contactForm').addEventListener('submit', async function(event) {
