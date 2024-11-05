@@ -1,0 +1,414 @@
+/* Estilo global */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #eaeff1; /* Un gris claro suave */
+    transition: background-color 0.3s ease;
+    color: #333; /* Color de texto más suave */
+  }
+  
+  /* Estilos para el modo claro (por defecto) */
+  body.dark-mode {
+    background-color: #1c1c1e; /* Un gris oscuro para el modo oscuro */
+    color: #eaeff1; /* Texto claro en modo oscuro */
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    background-color: #5d99c6; /* Azul suave */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-brand {
+    font-size: 26px;
+    font-weight: bold;
+    color: #080808;
+  }
+  
+  .navbar-nav {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    color: #030303; /* Enlaces de navegación en blanco */
+  }
+  
+  .nav-link:hover {
+    color: #ffd700; /* Color dorado para el efecto hover */
+  }
+  
+  /* Estilos para la notificación */
+  .notification {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(76, 175, 80, 0.9); /* Verde claro */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+  }
+  
+  .notification.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  /* Sección de inicio */
+  #inicio {
+    background-image: linear-gradient(to bottom, #a6c8f0, #a2d6b5); /* Gradiente azul-verde */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carousel-inner {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    color: #fff;
+  }
+  
+  /* Sección Sobre mí */
+  #sobre-mi {
+    background-color: #f0f4f8; /* Un tono gris suave */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #sobre-mi h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #sobre-mi p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  #sobre-mi img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  #sobre-mi img:hover {
+    transform: scale(1.1);
+  }
+  
+  .carousel-item img {
+    width: 721px;
+    height: 280px;
+    object-fit: cover; /* Ajusta la imagen dentro del tamaño especificado */
+    margin: 0 auto; /* Centra las imágenes horizontalmente */
+}
+
+
+  /* Sección Portafolio */
+  #portafolio {
+    background-color: #f0f4f8;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .card-text {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  /* Estilos para la sección Contacto y Enfermedades Mentales */
+#contacto-container {
+    display: flex; /* Usamos flexbox para alinear las secciones */
+    gap: 20px; /* Espacio entre las secciones */
+    justify-content: center; /* Centra el contenido horizontalmente */
+}
+
+.contact-section,
+.info-section {
+    width: 30%; /* Ajusta el ancho de cada sección según tus necesidades */
+    
+}
+
+
+
+
+  /* Estilo para la sección de contacto */
+.contact-form {
+    background-color: #f0f8ff; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    max-width: 400px; /* Ancho máximo */
+    margin: auto; /* Centrar la sección */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Fuente amigable */
+    color: #333; /* Color del título */
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+}
+
+.form-label {
+    font-family: 'Arial', sans-serif;
+    color: #555; /* Color de las etiquetas */
+}
+
+input, textarea {
+    border-radius: 5px; /* Bordes redondeados para inputs */
+    border: 1px solid #296ef0; /* Borde suave */
+}
+
+input:focus, textarea:focus {
+    border-color: #005397; /* Color del borde en foco */
+    outline: none; /* Quitar el borde por defecto */
+}
+
+.btn-primary {
+    background-color: #032f5f; /* Color del botón */
+    border: none; /* Sin borde */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.alert {
+    border-radius: 5px; /* Bordes redondeados para alertas */
+}
+
+.error {
+    font-size: 0.85em; /* Tamaño de fuente para mensajes de error */
+}
+#contacto {
+    text-align: left; /* Alinear el texto a la izquierda */
+}
+
+.contact-form {
+    max-width: 80; /* Quitar el ancho máximo para que ocupe todo el espacio */
+    margin-left: 0; /* Eliminar márgenes para alinear a la izquierda */
+    margin-right: auto; /* Alinear a la izquierda */
+}
+
+
+
+  /* Sección de enlaces de interés */
+  #iframe-container {
+    display: flex; /* Usamos flexbox para alinear los iframes */
+    gap: 20px; /* Espacio entre los iframes */
+    justify-content: center; /* Centrar el contenido */
+}
+
+#iframe-container iframe {
+    width: 45%; /* Ajusta el tamaño según tus necesidades */
+    height: 300px; /* Mantener la altura deseada */
+    border: none;
+    border-radius: 10px;
+}
+
+  
+  /* Sección de noticias o artículos */
+  #noticias {
+    background-color: #f0f4f8;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #noticias h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  #noticias p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  footer .privacy-links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer .privacy-links h5 {
+    margin-bottom: 10px;
+}
+ 
+footer .privacy-links ul {
+    padding: 0;
+    list-style: none;
+}
+
+  /* Redes Sociales */
+  footer {
+    background-color: #5d99c6; /* Azul suave */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 50px; /* Ajuste de margen superior para separar del contenido superior */
+  }
+  
+  footer .social-links a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5em;
+  }
+  
+  #politicas-content {
+    background-color: rosybrown; /* Fondo rojo claro con transparencia */
+    border: 1px solid rgba(252, 82, 82, 0.3); /* Borde rojo suave */
+    font-family: 'Arial', sans-serif; /* Fuente sencilla y legible */
+    color: #333; /* Texto en gris oscuro */
+    max-width: 900px; /* Ancho máximo para mantenerlo compacto */
+    margin: 0 auto; /* Centrado en la pantalla */
+    padding: 30px;
+}
+
+.policy-title {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #b30000; /* Rojo más intenso para el título */
+    margin-bottom: 20px;
+}
+
+.policy-text {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #4f4f4f;
+}
+
+#politicas-content p {
+    font-family: 'Georgia', serif; /* Fuente alternativa para darle un toque cálido */
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+
+  /* Sección de Políticas de Privacidad */
+  #politicas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    max-width: 90%;
+    width: 400px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+  }
+  
+  #politicas h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    color: #333;
+  }
+  
+  #politicas p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  #close-privacidad {
+    cursor: pointer;
+  }
+  
+/* Estilos por defecto (modo claro) */
+body {
+    background-color: white; /* Fondo claro */
+    color: black; /* Texto oscuro */
+}
+
+/* Estilos para el modo oscuro */
+body.dark-mode {
+    background-color: #121212; /* Fondo oscuro */
+    color: rgb(5, 5, 5); /* Texto claro */
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6 {
+    color: rgb(36, 171, 250); /* Títulos claros */
+}
+
+.dark-mode a {
+    color: #bb86fc; /* Color de enlaces en modo oscuro */
+}
+
+.dark-mode button {
+    background-color: #1f1f1f; /* Fondo oscuro para botones */
+    color: white; /* Texto claro para botones */
+    border: 1px solid #bb86fc; /* Borde claro */
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #333; /* Fondo oscuro para inputs */
+    color: white; /* Texto claro en inputs */
+    border: 1px solid #555; /* Borde más claro */
+}
+
+  
